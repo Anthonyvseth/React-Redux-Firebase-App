@@ -10,10 +10,7 @@ import PostDetails from './components/posts/PostDetails'
 function App() {
   return (
     <BrowserRouter>
-    <div style={{ 
-      backgroundImage: "url(/img/forest1.jpg)",
-      backgroundSize: "cover",
-    }}>
+     <div>
       <Navbar />
       <Switch>
         <Route exact path='/' component={Dashboard} />
