@@ -5,13 +5,13 @@ const SignInLinks = () => {
     return (
         <ul className="right">
             <li>
-                <NavLink to='/'>New Post</NavLink>
+                <NavLink to='/create'>New Post</NavLink>
             </li>
             <li>
                 <NavLink to='/'>Log Out</NavLink>
             </li>
             <li>
-                <NavLink to='/' className='btn btn-floating purple darken-1'>AVS</NavLink>
+                <NavLink to='/' className='btn btn-floating amber accent-4'>AVS</NavLink>
             </li>
         </ul>
     )
