@@ -7,7 +7,7 @@ import rootReducer from './reducers/rootReducer'
 import firebase from 'firebase/app'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-import { reduxFirestore, getFirestore } from 'redux-firestore'
+import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-firestore'
 import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase'
 import fbConfig from './config/fbConfig'
 
@@ -22,7 +22,8 @@ const store = createStore(
 const rrfProps = {
 firebase,
 config: fbConfig,
-dispatch: store.dispatch
+dispatch: store.dispatch,
+createFirestoreInstance 
 }
 ReactDOM.render(
   <React.StrictMode>
