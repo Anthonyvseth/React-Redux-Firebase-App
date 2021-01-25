@@ -1,12 +1,13 @@
 import React from 'react'
-
+import moment from 'moment'
 const PostSummary = ({post}) => {
+    console.log('POST SUMM', post)
     return (
         <div className='card z-depth-0 post-summary'>
             <div className='card-content grey-text text-darken-3'>
                 <span className='card-title'>{post.title}</span>
-                <p>Posted by Anthony Seth</p>
-                <p className='grey-text'>23rd January, 11:11</p>
+                <p>Posted by {post.userFirstName} {post.userLastName}</p>
+                <p className='grey-text'>{moment(post.createdAt.toDate()).calendar()}</p>
             </div>
         </div>
     )
